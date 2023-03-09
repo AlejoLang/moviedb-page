@@ -1,4 +1,4 @@
-async function fetchData ({ params }) {
+async function fetchData (params) {
 
   const QUERRY = new URLSearchParams(params);
   const API_KEY = process.env.REACT_APP_API_KEY;
