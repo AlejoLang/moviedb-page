@@ -1,8 +1,22 @@
 import React from "react";
 
 function Form() {
+
+  const handleSearch = () => {
+    
+  };
+
   return (
-    <div>index</div>
+    <form onSubmit={handleSearch}>
+      <input type="text" />
+      <input type="number" min="1950" max={new Date().getFullYear()}/>
+      <select name="" id="">
+        <option value="" default>All</option>
+        <option value="movie">Movie</option>
+        <option value="series">Series</option>
+        <option value="episode">Episode</option>
+      </select>
+    </form>
   );
 }
 
