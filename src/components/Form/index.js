@@ -16,6 +16,7 @@ function Form() {
         <option value="series">Series</option>
         <option value="episode">Episode</option>
       </select>
+      <button>Submit</button>
     </form>
   );
 }
