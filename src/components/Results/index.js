@@ -7,7 +7,9 @@ function Results({ searchedData, setSearchedData }) {
   const [maxIndex, setMaxIndex] = useState(10);
 
   useEffect(() => {
-
+    setMaxIndex(
+      Math.ceil(searchedData.totalResults / 10)
+    ); 
   }, [searchedData]);
 
   return (
@@ -24,6 +26,7 @@ function Results({ searchedData, setSearchedData }) {
           value={paginatorIndex} 
           onChange={(e) => {setPaginatorIndex(e.target.value);}}
         />
+        <p> / {Number.isNaN(maxIndex) ? 1 : maxIndex}</p>
         <button onClick={() => {setPaginatorIndex((lastVal) => lastVal + 1 <= maxIndex ? lastVal + 1 : maxIndex);}}>{">"}</button>
       </div>
     </div>
