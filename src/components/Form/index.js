@@ -14,9 +14,9 @@ function Form({ setSearchedData }) {
       type: searchedType,
       y: searchedYear
     };
-    let {Search} = await fetchData(QUERRY);
+    let results = await fetchData(QUERRY);
 
-    setSearchedData(Search ?? []);
+    setSearchedData(results ?? []);
   };
 
   return (
