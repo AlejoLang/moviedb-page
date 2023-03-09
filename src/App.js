@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "./components/Form";
 import Results from "./components/Results";
 
 function App() {
+
+  const [searchedData, setSearchedData] = useState([]);
+
   return (
     <div>
-      <Form />
-      <Results />
+      <Form setSearchedData={setSearchedData}/>
+      <Results searchedData={searchedData}/>
     </div>
   );
 }

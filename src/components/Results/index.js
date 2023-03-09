@@ -1,8 +1,8 @@
 import React from "react";
 
-function Results() {
+function Results({ searchedData }) {
   return (
-    <div>index</div>
+    <div>{searchedData.map(data => <p key={Math.random()}>{data.Title}</p>)}</div>
   );
 }
 

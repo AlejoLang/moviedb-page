@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import fetchData from "../../services/fetchData";
 
-function Form() {
+function Form({ setSearchedData }) {
 
   const [searchedMovie, setSearchedMovie] = useState("");
   const [searchedYear, setSearchedYear] = useState("");
@@ -14,8 +14,9 @@ function Form() {
       type: searchedType,
       y: searchedYear
     };
-    let response = await fetchData(QUERRY);
-    
+    let {Search} = await fetchData(QUERRY);
+
+    setSearchedData(Search ?? []);
   };
 
   return (
@@ -40,7 +41,7 @@ function Form() {
         id="" 
         onChange={(e) => {setSearchedType(e.target.options[e.target.selectedIndex].value);}}
       >
-        <option value=" " default>All</option>
+        <option value="" default>All</option>
         <option value="movie">Movie</option>
         <option value="series">Series</option>
         <option value="episode">Episode</option>
