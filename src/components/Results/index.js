@@ -1,8 +1,32 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from "react";
 
-function Results({ searchedData }) {
+function Results({ searchedData, setSearchedData }) {
+
+  const [paginatorIndex, setPaginatorIndex] = useState(1);
+  const [maxIndex, setMaxIndex] = useState(10);
+
+  useEffect(() => {
+
+  }, [searchedData]);
+
   return (
-    <div>{searchedData.map(data => <p key={Math.random()}>{data.Title}</p>)}</div>
+    <div>
+      <ul>
+
+      </ul>
+      <div className="paginator">
+        <button onClick={() => {setPaginatorIndex((lastVal) => lastVal - 1 > 0 ? lastVal - 1 : 1);}}>{"<"}</button>
+        <input 
+          type="number" 
+          min={1} 
+          max={maxIndex} 
+          value={paginatorIndex} 
+          onChange={(e) => {setPaginatorIndex(e.target.value);}}
+        />
+        <button onClick={() => {setPaginatorIndex((lastVal) => lastVal + 1 <= maxIndex ? lastVal + 1 : maxIndex);}}>{">"}</button>
+      </div>
+    </div>
   );
 }
 
