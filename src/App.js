@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Form setSearchedData={setSearchedData}/>
-      <Results searchedData={searchedData}/>
+      <Results searchedData={searchedData} setSearchedData={setSearchedData}/>
     </div>
   );
 }
