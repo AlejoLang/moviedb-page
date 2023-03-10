@@ -1,0 +1,9 @@
+.resultsList
+{
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    gap: 1.5rem;
+}
