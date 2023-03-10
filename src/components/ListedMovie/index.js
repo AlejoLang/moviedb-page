@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function ListedMovie({ movieData }) {
-  console.log(movieData);
+
+  const [poster, setPoster] = useState("");
+
+  useEffect(() => {
+    setPoster(movieData.Poster === "N/A" ? "/images/defaultPoster.png" : movieData.Poster);
+  }, [movieData]);
+
   return (
     <li>
-      <img src={movieData.Poster} alt={`${movieData.Title} poster`} />
+      <img src={poster} alt={`${movieData.Title} poster`} />
       <p>{movieData.Title}</p>
       <p>{movieData.Year}</p>
     </li>
