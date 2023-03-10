@@ -1,0 +1,31 @@
+.paginator
+{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;    
+    gap: 1rem;
+}
+
+.paginator > button
+{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: var(--second-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.paginator > p 
+{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.paginator > button:hover
+{
+    transform: scale(1.1);
+}
