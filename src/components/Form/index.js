@@ -48,10 +48,10 @@ function Form({ setSearchedData }) {
         id="" 
         onChange={(e) => {setSearchedType(e.target.options[e.target.selectedIndex].value);}}
       >
-        <option value="" default>All</option>
-        <option value="movie">Movie</option>
-        <option value="series">Series</option>
-        <option value="episode">Episode</option>
+        <option value="" default className="movieTypeInputOption">All</option>
+        <option value="movie" className="movieTypeInputOption">Movie</option>
+        <option value="series" className="movieTypeInputOption">Series</option>
+        <option value="episode" className="movieTypeInputOption">Episode</option>
       </select>
       <button className="searchBtn">Submit</button>
     </form>
