@@ -11,7 +11,7 @@ function Results({ searchedData, setSearchedData }) {
   useEffect(() => {
     setMaxIndex(
       Math.ceil(searchedData.totalResults / 10)
-    ); 
+    );
   }, [searchedData]);
 
   useEffect(() => {
@@ -26,6 +26,10 @@ function Results({ searchedData, setSearchedData }) {
     }
     getData();
   }, [paginatorIndex]);
+
+  useEffect(() => {
+    setPaginatorIndex(1);
+  },[maxIndex]);
 
   return (
     <div>
