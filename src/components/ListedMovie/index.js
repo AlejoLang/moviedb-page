@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function ListedMovie({ movieData }) {
 
-  const [poster, setPoster] = useState("");
+  const [poster, setPoster] = useState("/images/defaultPoster.png");
 
   useEffect(() => {
     setPoster(movieData.Poster === "N/A" ? "/images/defaultPoster.png" : movieData.Poster);
