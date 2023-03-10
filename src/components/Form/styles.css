@@ -39,3 +39,34 @@
     margin: 0;
     display: none;
 }
+
+.movieTypeInput
+{
+    width: 15ch;
+    height: 2.75rem;
+    padding: 0.25rem 1rem;
+    font-size: 16px;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    background: none;
+    color: var(--text-color);
+}
+
+.movieTypeInputOption
+{
+    background: var(--background-color);
+}
+
+.searchBtn
+{
+    background-color: var(--accent-color);
+    height: 2rem;
+    padding: 0.25rem 1rem;
+    font-size: 16px;
+    border-radius: 20px;
+    border:none;
+    box-sizing: content-box;
+    cursor: pointer;
+    color: var(--background-color);
+    font-weight: 700;
+}
