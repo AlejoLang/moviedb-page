@@ -1,8 +1,13 @@
 import React from "react";
+import ListedMovie from "../ListedMovie";
 
 function ResultsList({ results }) {
   return (
-    <div>{results?.map(a => <p key={Math.random()}>{a.Title}</p>)}</div>
+    <ol>
+      {results?.map(movieData => 
+        <ListedMovie key={Math.random()} movieData={movieData}/>
+      )}
+    </ol>
   );
 }
 
