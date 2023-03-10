@@ -3,11 +3,11 @@ import ListedMovie from "../ListedMovie";
 
 function ResultsList({ results }) {
   return (
-    <ol>
+    <ul>
       {results?.map(movieData => 
         <ListedMovie key={Math.random()} movieData={movieData}/>
       )}
-    </ol>
+    </ul>
   );
 }
 
