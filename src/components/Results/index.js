@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import fetchData from "../../services/fetchData";
 import ResultsList from "../ResultsList";
+import "./styles.css";
 
 function Results({ searchedData, setSearchedData }) {
 
