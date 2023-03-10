@@ -37,7 +37,7 @@ function Form({ setSearchedData }) {
         type="number"
         name="Movie year"
         className="movieYearInput"
-        placeholder="2004"
+        placeholder="Year"
         min="1950" 
         max={new Date().getFullYear()} 
         onChange={(e) => {setSearchedYear(e.target.value);}}
