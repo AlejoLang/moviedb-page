@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import fetchData from "../../services/fetchData";
+import "./styles.css";
 
 function Form({ setSearchedData }) {
 
@@ -20,10 +21,14 @@ function Form({ setSearchedData }) {
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form 
+      onSubmit={handleSearch} 
+      className="searchForm"
+    >
       <input 
         type="text"
         name="Movie name"
+        className="movieNameInput"
         placeholder="Insert a movie name"
         required 
         onChange={(e) => {setSearchedMovie(e.target.value);}}
@@ -31,6 +36,7 @@ function Form({ setSearchedData }) {
       <input 
         type="number"
         name="Movie year"
+        className="movieYearInput"
         placeholder="2004"
         min="1950" 
         max={new Date().getFullYear()} 
@@ -38,6 +44,7 @@ function Form({ setSearchedData }) {
       />
       <select 
         name="Search type" 
+        className="movieTypeInput"
         id="" 
         onChange={(e) => {setSearchedType(e.target.options[e.target.selectedIndex].value);}}
       >
@@ -46,7 +53,7 @@ function Form({ setSearchedData }) {
         <option value="series">Series</option>
         <option value="episode">Episode</option>
       </select>
-      <button>Submit</button>
+      <button className="searchBtn">Submit</button>
     </form>
   );
 }
