@@ -12,6 +12,7 @@ function Results({ searchedData, setSearchedData }) {
     setMaxIndex(
       Math.ceil(searchedData.totalResults / 10)
     );
+    window.scrollTo({top: 0, behavior: "smooth"});
   }, [searchedData]);
 
   useEffect(() => {
