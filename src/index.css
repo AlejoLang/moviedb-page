@@ -5,6 +5,7 @@
   --second-color: #808080;
   --accent-color: #FA9F42;
   --hover-color: #FF7733;
+  transition: 0.25s ease all;
 }
 
 body {
