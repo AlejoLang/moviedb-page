@@ -1,0 +1,21 @@
+.searchForm
+{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.movieNameInput
+{
+    width: 30ch;
+    height: 2rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 16px;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    background: none;
+    color: var(--text-color);
+}
