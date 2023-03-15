@@ -1,0 +1,39 @@
+.listedMovie
+{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--second-color);
+    cursor: pointer;
+}
+
+.listedMoviePoster
+{
+    width: 100%;
+    aspect-ratio: 3/4;
+    margin: 0;
+}
+
+.listedMovieInfo
+{
+    padding: 0.5rem 1.5rem;
+    line-height: 3;
+}
+
+.listedMovieTitle
+{
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.listedMovieYear 
+{
+    font-weight: 700;
+    background-color: var(--accent-color);
+    display: inline;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+}
