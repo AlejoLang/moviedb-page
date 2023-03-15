@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./styles.css";
 
 function ListedMovie({ movieData }) {
 
@@ -9,10 +10,14 @@ function ListedMovie({ movieData }) {
   }, [movieData]);
 
   return (
-    <li>
-      <img src={poster} alt={`${movieData.Title} poster`} />
-      <p>{movieData.Title}</p>
-      <p>{movieData.Year}</p>
+    <li className="listedMovie">
+      <img 
+        src={poster} 
+        alt={`${movieData.Title} poster`} 
+        className="listedMoviePoster"
+      />
+      <p className="listedMovieTitle">{movieData.Title}</p>
+      <p className="listedMovieYear">{movieData.Year}</p>
     </li>
   );
 }
