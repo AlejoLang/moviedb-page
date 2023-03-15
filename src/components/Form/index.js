@@ -31,6 +31,7 @@ function Form({ setSearchedData }) {
         className="movieNameInput"
         placeholder="Insert a movie name"
         required 
+        autoComplete="off"
         onChange={(e) => {setSearchedMovie(e.target.value);}}
       />
       <input 
