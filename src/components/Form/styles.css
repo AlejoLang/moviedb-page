@@ -84,4 +84,5 @@
 .searchBtn:hover
 {
     background: var(--hover-color);
+    opacity: 0.75;
 }
