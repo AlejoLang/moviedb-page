@@ -16,8 +16,10 @@ function ListedMovie({ movieData }) {
         alt={`${movieData.Title} poster`} 
         className="listedMoviePoster"
       />
-      <p className="listedMovieTitle">{movieData.Title}</p>
-      <p className="listedMovieYear">{movieData.Year}</p>
+      <div className="listedMovieInfo">
+        <p className="listedMovieTitle">{movieData.Title}</p>
+        <p className="listedMovieYear">{movieData.Year}</p>
+      </div>
     </li>
   );
 }
